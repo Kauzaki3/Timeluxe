@@ -1,0 +1,123 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TimeLuxe Service</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    .font-pacifico {
+      font-family: "Pacifico", cursive;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+  <header class="bg-black text-white">
+    <nav class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex items-center h-16">
+      <a href="index.html" class="font-pacifico text-xl select-none">TimeLuxe</a>
+      <ul class="ml-auto flex space-x-6 text-sm font-normal">
+        <li><a class="text-white font-semibold" href="index.html">Home</a></li>
+        <li><a href="service.html" class="font-semibold hover:underline">Service</a></li>
+        <li><a href="perpustakaan.html" class="hover:underline">Perpustakaan</a></li>
+        <li><a href="komunitas.html" class="hover:underline">Komunitas</a></li>
+        <li><a href="layanan.html" class="hover:underline">Layanan</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="flex-grow max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-10">
+    <h1 class="text-2xl font-bold mb-8">Layanan Service Jam Tangan</h1>
+    <div class="flex flex-col lg:flex-row gap-8">
+      <form class="flex-1 space-y-6" action="#" method="POST" enctype="multipart/form-data" novalidate>
+        <div>
+          <label for="nama" class="block text-xs mb-1">Nama Lengkap</label>
+          <input id="nama" name="nama" type="text" class="w-full rounded border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-black focus:border-black" />
+        </div>
+        <div>
+          <label for="nomor" class="block text-xs mb-1">Nomor Handphone</label>
+          <input id="nomor" name="nomor" type="tel" class="w-full rounded border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-black focus:border-black" />
+        </div>
+        <div>
+          <label for="email" class="block text-xs mb-1">Email</label>
+          <input id="email" name="email" type="email" class="w-full rounded border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-black focus:border-black" />
+        </div>
+        <div>
+          <label for="alamat" class="block text-xs mb-1">Alamat Lengkap</label>
+          <textarea id="alamat" name="alamat" rows="3" class="w-full rounded border border-gray-300 px-3 py-2 text-sm resize-none focus:outline-none focus:ring-1 focus:ring-black focus:border-black"></textarea>
+        </div>
+        <div>
+          <label for="masalah" class="block text-xs mb-1">Jelaskan Masalah Jam Anda</label>
+          <textarea id="masalah" name="masalah" rows="4" class="w-full rounded border border-gray-300 px-3 py-2 text-sm resize-none focus:outline-none focus:ring-1 focus:ring-black focus:border-black"></textarea>
+        </div>
+        <div>
+          <label for="foto" class="block text-xs mb-1">Foto Kondisi Jam</label>
+          <label for="foto" class="flex flex-col items-center justify-center border border-dashed border-gray-400 rounded-md cursor-pointer py-8 text-center text-gray-500 text-xs select-none hover:border-black hover:text-black">
+            <i class="fas fa-camera text-lg mb-1"></i>
+            Klik untuk upload foto
+            <input id="foto" name="foto" type="file" accept="image/*" class="hidden" />
+          </label>
+        </div>
+        <button type="submit" class="w-full bg-black text-white rounded-md py-2 text-sm font-normal hover:bg-gray-900 transition-colors">
+          Ajukan Konsultasi
+        </button>
+      </form>
+
+      <section aria-label="Pelacakan Perbaikan" class="flex-1 bg-white rounded-md p-6 shadow-sm max-w-md w-full">
+        <h2 class="font-semibold mb-4 text-base">Pelacakan Perbaikan</h2>
+        <form action="#" method="POST" novalidate class="space-y-4">
+          <div>
+            <label for="email-pelacakan" class="block text-xs mb-1">Email</label>
+            <input id="email-pelacakan" name="email-pelacakan" type="email" class="w-full rounded border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-black focus:border-black" />
+          </div>
+          <div>
+            <label for="kode-unik" class="block text-xs mb-1">Kode Unik</label>
+            <input id="kode-unik" name="kode-unik" type="text" class="w-full rounded border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-black focus:border-black" />
+          </div>
+          <button type="submit" class="w-full bg-black text-white rounded-md py-2 text-sm font-normal hover:bg-gray-900 transition-colors">
+            Lacak Status
+          </button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer class="bg-black text-gray-300 py-10">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-3 gap-8">
+      <div>
+        <h3 class="font-semibold mb-3 text-white">Tentang Kami</h3>
+        <p class="text-xs sm:text-sm leading-relaxed">
+          WatchLuxe adalah pusat servis jam tangan terpercaya dengan pengalaman lebih dari 15 tahun. Kami menyediakan layanan perbaikan dan perawatan untuk berbagai merk jam tangan mewah dengan garansi.
+        </p>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-3 text-white">Layanan Kami</h3>
+        <ul class="text-xs sm:text-sm space-y-2">
+          <li><i class="fas fa-wrench mr-2"></i> Perbaikan Masalah</li>
+          <li><i class="fas fa-sync-alt mr-2"></i> Penggantian Baterai</li>
+          <li><i class="fas fa-tools mr-2"></i> Penggantian Casing</li>
+          <li><i class="fas fa-cogs mr-2"></i> Perawatan Jam</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-3 text-white">Hubungi Kami</h3>
+        <ul class="text-xs sm:text-sm space-y-2">
+          <li><i class="fab fa-whatsapp mr-2"></i> +62 857-3742-3328</li>
+          <li><i class="fab fa-instagram mr-2"></i> @WatcLuxe</li>
+          <li><i class="fab fa-facebook-f mr-2"></i> WatchLuxe</li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-center text-xs text-gray-500 mt-8">
+      © 2025 WatchLuxe. Hak Cipta Dilindungi.
+    </div>
+  </footer>
+
+</body>
+</html>
