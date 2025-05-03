@@ -1,22 +1,49 @@
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TimeLuxe Service</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-  />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
-    rel="stylesheet"
-  />
-  <style>
-    .font-pacifico {
-      font-family: "Pacifico", cursive;
-    }
-  </style>
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TimeLuxe - Layanan Service Jam Tangan</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#000000", secondary: "#333333" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <style>
+      .font-pacifico {
+         font-family: "Pacifico", cursive;
+       }
+     </style>
+  </head>
+  <body class="bg-white">
+    <!-- HEADER -->
 </head>
 <body class="bg-gray-50 flex flex-col min-h-screen">
   <header class="bg-black text-white">
@@ -31,93 +58,455 @@
       </ul>
     </nav>
   </header>
-
-  <main class="flex-grow max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-10">
-    <h1 class="text-2xl font-bold mb-8">Layanan Service Jam Tangan</h1>
-    <div class="flex flex-col lg:flex-row gap-8">
-      <form class="flex-1 space-y-6" action="#" method="POST" enctype="multipart/form-data" novalidate>
-        <div>
-          <label for="nama" class="block text-xs mb-1">Nama Lengkap</label>
-          <input id="nama" name="nama" type="text" class="w-full rounded border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-black focus:border-black" />
-        </div>
-        <div>
-          <label for="nomor" class="block text-xs mb-1">Nomor Handphone</label>
-          <input id="nomor" name="nomor" type="tel" class="w-full rounded border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-black focus:border-black" />
-        </div>
-        <div>
-          <label for="email" class="block text-xs mb-1">Email</label>
-          <input id="email" name="email" type="email" class="w-full rounded border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-black focus:border-black" />
-        </div>
-        <div>
-          <label for="alamat" class="block text-xs mb-1">Alamat Lengkap</label>
-          <textarea id="alamat" name="alamat" rows="3" class="w-full rounded border border-gray-300 px-3 py-2 text-sm resize-none focus:outline-none focus:ring-1 focus:ring-black focus:border-black"></textarea>
-        </div>
-        <div>
-          <label for="masalah" class="block text-xs mb-1">Jelaskan Masalah Jam Anda</label>
-          <textarea id="masalah" name="masalah" rows="4" class="w-full rounded border border-gray-300 px-3 py-2 text-sm resize-none focus:outline-none focus:ring-1 focus:ring-black focus:border-black"></textarea>
-        </div>
-        <div>
-          <label for="foto" class="block text-xs mb-1">Foto Kondisi Jam</label>
-          <label for="foto" class="flex flex-col items-center justify-center border border-dashed border-gray-400 rounded-md cursor-pointer py-8 text-center text-gray-500 text-xs select-none hover:border-black hover:text-black">
-            <i class="fas fa-camera text-lg mb-1"></i>
-            Klik untuk upload foto
-            <input id="foto" name="foto" type="file" accept="image/*" class="hidden" />
-          </label>
-        </div>
-        <button type="submit" class="w-full bg-black text-white rounded-md py-2 text-sm font-normal hover:bg-gray-900 transition-colors">
-          Ajukan Konsultasi
-        </button>
-      </form>
-
-      <section aria-label="Pelacakan Perbaikan" class="flex-1 bg-white rounded-md p-6 shadow-sm max-w-md w-full">
-        <h2 class="font-semibold mb-4 text-base">Pelacakan Perbaikan</h2>
-        <form action="#" method="POST" novalidate class="space-y-4">
-          <div>
-            <label for="email-pelacakan" class="block text-xs mb-1">Email</label>
-            <input id="email-pelacakan" name="email-pelacakan" type="email" class="w-full rounded border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-black focus:border-black" />
-          </div>
-          <div>
-            <label for="kode-unik" class="block text-xs mb-1">Kode Unik</label>
-            <input id="kode-unik" name="kode-unik" type="text" class="w-full rounded border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-black focus:border-black" />
-          </div>
-          <button type="submit" class="w-full bg-black text-white rounded-md py-2 text-sm font-normal hover:bg-gray-900 transition-colors">
-            Lacak Status
-          </button>
-        </form>
-      </section>
-    </div>
-  </main>
-
-  <footer class="bg-black text-gray-300 py-10">
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-3 gap-8">
-      <div>
-        <h3 class="font-semibold mb-3 text-white">Tentang Kami</h3>
-        <p class="text-xs sm:text-sm leading-relaxed">
-          WatchLuxe adalah pusat servis jam tangan terpercaya dengan pengalaman lebih dari 15 tahun. Kami menyediakan layanan perbaikan dan perawatan untuk berbagai merk jam tangan mewah dengan garansi.
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 py-12">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold mb-4">Layanan Service Jam Tangan</h1>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Percayakan jam tangan Anda kepada ahlinya. Kami menyediakan layanan
+          perbaikan profesional dengan teknisi berpengalaman.
         </p>
       </div>
-      <div>
-        <h3 class="font-semibold mb-3 text-white">Layanan Kami</h3>
-        <ul class="text-xs sm:text-sm space-y-2">
-          <li><i class="fas fa-wrench mr-2"></i> Perbaikan Masalah</li>
-          <li><i class="fas fa-sync-alt mr-2"></i> Penggantian Baterai</li>
-          <li><i class="fas fa-tools mr-2"></i> Penggantian Casing</li>
-          <li><i class="fas fa-cogs mr-2"></i> Perawatan Jam</li>
-        </ul>
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Left Column: Consultation Form -->
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+          <form class="space-y-6">
+            <div class="space-y-1">
+              <label class="block mb-2 text-sm font-medium" for="nama"
+                >Nama Lengkap</label
+              >
+              <input
+                type="text"
+                id="nama"
+                class="w-full p-4 bg-gray-50 border-none rounded focus:ring-2 focus:ring-primary/20 transition-all"
+                required
+              />
+            </div>
+            <div class="mb-4">
+              <label class="block mb-2 text-sm font-medium" for="handphone"
+                >Nomor Handphone</label
+              >
+              <input
+                type="tel"
+                id="handphone"
+                class="w-full p-4 bg-gray-50 border-none rounded focus:ring-2 focus:ring-primary/20 transition-all"
+                required
+              />
+            </div>
+            <div class="mb-4">
+              <label class="block mb-2 text-sm font-medium" for="email"
+                >Email</label
+              >
+              <input
+                type="email"
+                id="email"
+                class="w-full p-4 bg-gray-50 border-none rounded focus:ring-2 focus:ring-primary/20 transition-all"
+                required
+              />
+            </div>
+            <div class="mb-4">
+              <label class="block mb-2 text-sm font-medium" for="alamat"
+                >Alamat Lengkap</label
+              >
+              <textarea
+                id="alamat"
+                class="w-full p-4 bg-gray-50 border-none rounded focus:ring-2 focus:ring-primary/20 transition-all h-24"
+                required
+              ></textarea>
+            </div>
+            <div class="mb-4">
+              <label class="block mb-2 text-sm font-medium" for="masalah"
+                >Jelaskan Masalah Jam Anda</label
+              >
+              <textarea
+                id="masalah"
+                class="w-full p-4 bg-gray-50 border-none rounded focus:ring-2 focus:ring-primary/20 transition-all h-24"
+                required
+              ></textarea>
+            </div>
+            <div class="mb-6">
+              <label class="block mb-2 text-sm font-medium"
+                >Foto Kondisi Jam</label
+              >
+              <div
+                class="border-2 border-dashed border-gray-200 rounded-lg p-8 text-center cursor-pointer relative bg-gray-50 hover:bg-gray-100 transition-all"
+              >
+                <input
+                  type="file"
+                  id="foto"
+                  class="absolute inset-0 opacity-0 cursor-pointer"
+                  accept="image/*"
+                />
+                <div class="flex flex-col items-center justify-center">
+                  <div class="w-12 h-12 flex items-center justify-center mb-2">
+                    <i class="ri-camera-line ri-2x text-gray-400"></i>
+                  </div>
+                  <p class="text-sm text-gray-500">Klik untuk upload foto</p>
+                </div>
+              </div>
+            </div>
+            <button
+              type="submit"
+              id="submitConsultation"
+              class="w-full bg-primary text-white py-4 font-medium !rounded-button whitespace-nowrap hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
+            >
+              <i class="ri-send-plane-line"></i>
+              <span>Ajukan Konsultasi</span>
+            </button>
+          </form>
+        </div>
+        <div
+          id="confirmationModal"
+          class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50"
+        >
+          <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">
+            <div class="text-center">
+              <div
+                class="w-16 h-16 mx-auto flex items-center justify-center mb-4 bg-green-100 rounded-full"
+              >
+                <i class="ri-check-line ri-2x text-green-500"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">
+                Konsultasi Berhasil Diajukan
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Terima kasih telah mengajukan konsultasi. Tim kami akan segera
+                menghubungi Anda.
+              </p>
+              <div class="bg-gray-50 rounded-lg p-4 mb-6">
+                <p class="text-sm text-gray-500 mb-2">Nomor Tiket Anda:</p>
+                <p
+                  id="ticketNumber"
+                  class="text-lg font-semibold text-primary"
+                ></p>
+              </div>
+              <div class="text-left space-y-2 mb-6">
+                <p class="text-sm text-gray-600">Langkah selanjutnya:</p>
+                <ul class="text-sm text-gray-600 space-y-1">
+                  <li class="flex items-start gap-2">
+                    <div
+                      class="w-5 h-5 flex items-center justify-center mt-0.5"
+                    >
+                      <i class="ri-checkbox-circle-line text-green-500"></i>
+                    </div>
+                    <span>Simpan nomor tiket untuk melacak status</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <div
+                      class="w-5 h-5 flex items-center justify-center mt-0.5"
+                    >
+                      <i class="ri-checkbox-circle-line text-green-500"></i>
+                    </div>
+                    <span>Tim kami akan menghubungi dalam 24 jam</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <div
+                      class="w-5 h-5 flex items-center justify-center mt-0.5"
+                    >
+                      <i class="ri-checkbox-circle-line text-green-500"></i>
+                    </div>
+                    <span>Siapkan jam tangan untuk pickup/pengantaran</span>
+                  </li>
+                </ul>
+              </div>
+              <button
+                id="closeConfirmation"
+                class="w-full bg-primary text-white py-3 font-medium !rounded-button whitespace-nowrap hover:bg-primary/90 transition-all"
+              >
+                Tutup
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Right Column: Status Tracking -->
+        <div>
+          <div class="bg-white p-8 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-semibold mb-6">Pelacakan Perbaikan</h2>
+            <div class="mb-4">
+              <label class="block mb-2 text-sm font-medium" for="track-email"
+                >Email</label
+              >
+              <input
+                type="email"
+                id="track-email"
+                class="w-full p-4 bg-gray-50 border-none rounded focus:ring-2 focus:ring-primary/20 transition-all"
+                required
+              />
+            </div>
+            <div class="mb-6">
+              <label class="block mb-2 text-sm font-medium" for="kode-unik"
+                >Kode Unik</label
+              >
+              <input
+                type="text"
+                id="kode-unik"
+                class="w-full p-4 bg-gray-50 border-none rounded focus:ring-2 focus:ring-primary/20 transition-all"
+                required
+              />
+            </div>
+            <button
+              type="button"
+              id="trackButton"
+              class="w-full bg-primary text-white py-4 font-medium !rounded-button whitespace-nowrap hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
+            >
+              <i class="ri-search-line"></i>
+              <span>Lacak Status</span>
+            </button>
+          </div>
+          <div
+            id="trackingModal"
+            class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50"
+          >
+            <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">
+              <div class="flex justify-between items-center mb-6">
+                <h3 class="text-xl font-semibold">Status Perbaikan</h3>
+                <button
+                  id="closeModal"
+                  class="text-gray-400 hover:text-gray-600"
+                >
+                  <div class="w-6 h-6 flex items-center justify-center">
+                    <i class="ri-close-line ri-lg"></i>
+                  </div>
+                </button>
+              </div>
+              <div id="trackingContent"></div>
+            </div>
+          </div>
+          <div class="mt-8 bg-white p-8 rounded-lg shadow-lg">
+            <h2 class="text-xl font-semibold mb-4">Informasi Layanan</h2>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <div class="w-6 h-6 flex items-center justify-center mr-2 mt-1">
+                  <i class="ri-time-line text-primary"></i>
+                </div>
+                <span>Estimasi waktu perbaikan: 3-7 hari kerja</span>
+              </li>
+              <li class="flex items-start">
+                <div class="w-6 h-6 flex items-center justify-center mr-2 mt-1">
+                  <i class="ri-shield-check-line text-primary"></i>
+                </div>
+                <span>Garansi perbaikan selama 3 bulan</span>
+              </li>
+              <li class="flex items-start">
+                <div class="w-6 h-6 flex items-center justify-center mr-2 mt-1">
+                  <i class="ri-money-dollar-circle-line text-primary"></i>
+                </div>
+                <span>Biaya konsultasi awal gratis</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-black text-gray-300 py-10">
+      <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-3 gap-8">
+        <div>
+          <h3 class="font-semibold mb-3 text-white">Tentang Kami</h3>
+          <p class="text-xs sm:text-sm leading-relaxed">
+            WatchLuxe adalah pusat servis jam tangan terpercaya dengan pengalaman lebih dari 15 tahun. Kami menyediakan layanan perbaikan dan perawatan untuk berbagai merk jam tangan mewah dengan garansi.
+          </p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-3 text-white">Layanan Kami</h3>
+          <ul class="text-xs sm:text-sm space-y-2">
+            <li><i class="fas fa-wrench mr-2"></i> Perbaikan Masalah</li>
+            <li><i class="fas fa-sync-alt mr-2"></i> Penggantian Baterai</li>
+            <li><i class="fas fa-tools mr-2"></i> Penggantian Casing</li>
+            <li><i class="fas fa-cogs mr-2"></i> Perawatan Jam</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-3 text-white">Hubungi Kami</h3>
+          <ul class="text-xs sm:text-sm space-y-2">
+            <li><i class="fab fa-whatsapp mr-2"></i> +62 857-3742-3328</li>
+            <li><i class="fab fa-instagram mr-2"></i> @WatcLuxe</li>
+            <li><i class="fab fa-facebook-f mr-2"></i> WatchLuxe</li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center text-xs text-gray-500 mt-8">
+        © 2025 WatchLuxe. Hak Cipta Dilindungi.
+      </div>
+    </footer>  
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const consultationForm = document.querySelector("form");
+        const confirmationModal = document.getElementById("confirmationModal");
+        const closeConfirmationBtn = document.getElementById("closeConfirmation");
+        const ticketNumber = document.getElementById("ticketNumber");
+        function generateTicketNumber() {
+          const prefix = "TL";
+          const timestamp = Date.now().toString().slice(-6);
+          const random = Math.floor(Math.random() * 1000)
+            .toString()
+            .padStart(3, "0");
+          return `${prefix}${timestamp}${random}`;
+        }
+        function validateForm() {
+          const nama = document.getElementById("nama").value.trim();
+          const handphone = document.getElementById("handphone").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const alamat = document.getElementById("alamat").value.trim();
+          const masalah = document.getElementById("masalah").value.trim();
+          if (!nama || !handphone || !email || !alamat || !masalah) {
+            return false;
+          }
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(email)) {
+            return false;
+          }
+          const phoneRegex = /^[0-9]{10,13}$/;
+          if (!phoneRegex.test(handphone.replace(/[^0-9]/g, ""))) {
+            return false;
+          }
+          return true;
+        }
+        consultationForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          if (!validateForm()) {
+            const errorModal = document.createElement("div");
+            errorModal.className =
+              "fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50";
+            errorModal.innerHTML = `
+      <div class="bg-white rounded-lg p-6 max-w-sm w-full mx-4">
+      <div class="text-center">
+      <div class="w-12 h-12 mx-auto flex items-center justify-center mb-4 bg-red-100 rounded-full">
+      <i class="ri-error-warning-line ri-2x text-red-500"></i>
+      </div>
+      <h3 class="text-lg font-semibold mb-2">Form Tidak Lengkap</h3>
+      <p class="text-gray-600 mb-4">Mohon lengkapi semua field dengan benar</p>
+      <button class="w-full bg-primary text-white py-2 font-medium !rounded-button whitespace-nowrap hover:bg-primary/90 transition-all">OK</button>
+      </div>
+      </div>
+      `;
+            document.body.appendChild(errorModal);
+            errorModal.querySelector("button").onclick = () => errorModal.remove();
+            return;
+          }
+          ticketNumber.textContent = generateTicketNumber();
+          confirmationModal.classList.remove("hidden");
+          confirmationModal.classList.add("flex");
+          consultationForm.reset();
+          const previewImage = document.querySelector(".preview-image");
+          if (previewImage) {
+            previewImage.remove();
+          }
+          const uploadArea = document.querySelector(".border-dashed div");
+          if (uploadArea) {
+            uploadArea.style.display = "flex";
+          }
+        });
+        closeConfirmationBtn.addEventListener("click", function () {
+          confirmationModal.classList.remove("flex");
+          confirmationModal.classList.add("hidden");
+        });
+        confirmationModal.addEventListener("click", function (e) {
+          if (e.target === confirmationModal) {
+            confirmationModal.classList.remove("flex");
+            confirmationModal.classList.add("hidden");
+          }
+        });
+        const trackButton = document.getElementById("trackButton");
+        const trackingModal = document.getElementById("trackingModal");
+        const closeModal = document.getElementById("closeModal");
+        const trackingContent = document.getElementById("trackingContent");
+        const trackEmail = document.getElementById("track-email");
+        const trackKode = document.getElementById("kode-unik");
+        trackButton.addEventListener("click", function () {
+          const email = trackEmail.value.trim();
+          const kode = trackKode.value.trim();
+          if (!email || !kode) {
+            trackingContent.innerHTML = `
+      <div class="text-center py-4">
+      <div class="w-12 h-12 mx-auto flex items-center justify-center mb-4">
+      <i class="ri-error-warning-line ri-2x text-red-500"></i>
+      </div>
+      <p class="text-gray-600">Mohon lengkapi email dan kode unik</p>
+      </div>
+      `;
+          } else {
+            const mockData = {
+              status: "Sedang Diperbaiki",
+              estimasi: "2025-05-06",
+              teknisi: "Ahmad Wijaya",
+              catatan: "Penggantian baterai dan service mesin",
+              progress: 65,
+            };
+            trackingContent.innerHTML = `
+      <div class="space-y-4">
+      <div class="flex items-center gap-3 p-3 bg-blue-50 rounded">
+      <div class="w-8 h-8 flex items-center justify-center">
+      <i class="ri-tools-line text-blue-500"></i>
       </div>
       <div>
-        <h3 class="font-semibold mb-3 text-white">Hubungi Kami</h3>
-        <ul class="text-xs sm:text-sm space-y-2">
-          <li><i class="fab fa-whatsapp mr-2"></i> +62 857-3742-3328</li>
-          <li><i class="fab fa-instagram mr-2"></i> @WatcLuxe</li>
-          <li><i class="fab fa-facebook-f mr-2"></i> WatchLuxe</li>
-        </ul>
+      <p class="font-medium text-blue-700">${mockData.status}</p>
+      <p class="text-sm text-blue-600">Estimasi selesai: ${mockData.estimasi}</p>
       </div>
-    </div>
-    <div class="text-center text-xs text-gray-500 mt-8">
-      © 2025 WatchLuxe. Hak Cipta Dilindungi.
-    </div>
-  </footer>
-
-</body>
+      </div>
+      <div class="space-y-2">
+      <div class="bg-gray-200 rounded-full h-2">
+      <div class="bg-primary h-2 rounded-full" style="width: ${mockData.progress}%"></div>
+      </div>
+      <div class="flex justify-between text-sm text-gray-500">
+      <span>Progress</span>
+      <span>${mockData.progress}%</span>
+      </div>
+      </div>
+      <div class="space-y-3 pt-2">
+      <div class="flex gap-2">
+      <div class="w-5 h-5 flex items-center justify-center">
+      <i class="ri-user-line text-gray-400"></i>
+      </div>
+      <p class="text-gray-600">Teknisi: ${mockData.teknisi}</p>
+      </div>
+      <div class="flex gap-2">
+      <div class="w-5 h-5 flex items-center justify-center">
+      <i class="ri-file-list-line text-gray-400"></i>
+      </div>
+      <p class="text-gray-600">Catatan: ${mockData.catatan}</p>
+      </div>
+      </div>
+      </div>
+      `;
+          }
+          trackingModal.classList.remove("hidden");
+          trackingModal.classList.add("flex");
+        });
+        closeModal.addEventListener("click", function () {
+          trackingModal.classList.remove("flex");
+          trackingModal.classList.add("hidden");
+        });
+        trackingModal.addEventListener("click", function (e) {
+          if (e.target === trackingModal) {
+            trackingModal.classList.remove("flex");
+            trackingModal.classList.add("hidden");
+          }
+        });
+        // File upload preview
+        const fileInput = document.getElementById("foto");
+        const uploadArea = fileInput.parentElement;
+        fileInput.addEventListener("change", function (e) {
+          if (fileInput.files && fileInput.files[0]) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+              // Remove existing preview if any
+              const existingPreview = uploadArea.querySelector(".preview-image");
+              if (existingPreview) {
+                existingPreview.remove();
+              }
+              // Hide the icon and text
+              uploadArea.querySelector("div").style.display = "none";
+              // Create preview
+              const img = document.createElement("img");
+              img.src = e.target.result;
+              img.classList.add("preview-image", "max-h-48", "mx-auto");
+              uploadArea.appendChild(img);
+            };
+            reader.readAsDataURL(fileInput.files[0]);
+          }
+        });
+      });
+    </script>
+  </body>
 </html>

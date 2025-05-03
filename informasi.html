@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TimeLuxe - Pustaka Informasi Jam Tangan</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>
+tailwind.config={theme:{extend:{colors:{primary:'#000000',secondary:'#1a1a1a'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+<style>
+    .font-pacifico {
+       font-family: "Pacifico", cursive;
+     }
+   </style>
+ </head>
+ <body class="bg-gray-50 flex flex-col min-h-screen">
+   <header class="bg-black text-white">
+     <nav class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex items-center h-16">
+       <a href="index.html" class="font-pacifico text-xl select-none">TimeLuxe</a>
+       <ul class="ml-auto flex space-x-6 text-sm font-normal">
+         <li><a class="text-white font-semibold" href="index.html">Home</a></li>
+         <li><a href="service.html" class="font-semibold hover:underline">Service</a></li>
+         <li><a href="perpustakaan.html" class="hover:underline">Perpustakaan</a></li>
+         <li><a href="komunitas.html" class="hover:underline">Komunitas</a></li>
+         <li><a href="layanan.html" class="hover:underline">Layanan</a></li>
+       </ul>
+     </nav>
+   </header>
+<section class="relative h-[500px] bg-black overflow-hidden">
+    <div class="absolute inset-0 z-0">
+        <img src="https://readdy.ai/api/search-image?query=luxury%2520watch%2520library%2520with%2520elegant%2520display%2520of%2520various%2520watches%2520on%2520dark%2520wooden%2520shelves%252C%2520soft%2520lighting%252C%2520professional%2520photography%252C%2520moody%2520atmosphere%252C%2520high-end%2520interior%2520design%252C%2520watch%2520collector%2527s%2520paradise&width=1920&height=1000&seq=1&orientation=landscape" alt="Hero" class="w-full h-full object-cover opacity-80">
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 h-full flex items-center">
+        <div class="max-w-3xl text-white">
+            <h1 class="text-5xl font-bold mb-6">Pustaka Informasi Jam Tangan</h1>
+            <p class="text-xl mb-8">Temukan koleksi artikel, panduan, dan sumber daya lengkap tentang jam tangan untuk membantu Anda memahami, merawat, dan mengapresiasi karya seni horologi.</p>
+            <a href="perpustakaan.html" class="group bg-white text-black px-8 py-3 font-medium !rounded-button hover:bg-gray-100 transition-all flex items-center gap-2 hover:gap-3 w-fit">
+                <span>Kembali ke Beranda</span>
+                <i class="ri-arrow-left-line transition-all group-hover:transform group-hover:-translate-x-1"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-4 py-8 -mt-12 relative z-20">
+    <div class="bg-white rounded-lg shadow-lg p-6">
+        <div class="flex flex-col md:flex-row gap-4 items-center justify-between">
+            <div class="relative w-full md:w-1/3">
+                <input type="text" placeholder="Cari artikel..." class="w-full pl-12 pr-4 py-3 bg-gray-50 rounded-lg border-none focus:ring-2 focus:ring-primary/20">
+                <div class="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center">
+                    <i class="ri-search-line text-gray-400"></i>
+                </div>
+            </div>
+            
+            <div class="flex flex-wrap gap-2 w-full md:w-auto">
+                <div class="bg-gray-100 px-1 py-1 rounded-full flex">
+                    <button class="px-4 py-2 rounded-full bg-primary text-white">Semua</button>
+                    <button class="px-4 py-2 rounded-full text-gray-700 hover:bg-gray-200">Perawatan</button>
+                    <button class="px-4 py-2 rounded-full text-gray-700 hover:bg-gray-200">Sejarah</button>
+                    <button class="px-4 py-2 rounded-full text-gray-700 hover:bg-gray-200">Review</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-6 flex flex-wrap gap-2">
+            <span class="text-sm font-medium mr-2">Tag Populer:</span>
+            <a href="#" class="text-sm px-3 py-1 bg-gray-100 rounded-full hover:bg-gray-200">Rolex</a>
+            <a href="#" class="text-sm px-3 py-1 bg-gray-100 rounded-full hover:bg-gray-200">Perawatan Rutin</a>
+            <a href="#" class="text-sm px-3 py-1 bg-gray-100 rounded-full hover:bg-gray-200">Vintage</a>
+            <a href="#" class="text-sm px-3 py-1 bg-gray-100 rounded-full hover:bg-gray-200">Smartwatch</a>
+            <a href="#" class="text-sm px-3 py-1 bg-gray-100 rounded-full hover:bg-gray-200">Investasi</a>
+        </div>
+    </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-4 py-12">
+    <h2 class="text-3xl font-bold mb-8">Artikel Terbaru</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <article class="article-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all">
+            <div class="h-52 overflow-hidden">
+                <img src="https://readdy.ai/api/search-image?query=watchmaker%2520working%2520on%2520luxury%2520watch%2520movement%2520with%2520professional%2520tools%252C%2520detailed%2520close-up%2520of%2520intricate%2520mechanical%2520parts%252C%2520professional%2520studio%2520lighting%252C%2520high-end%2520watch%2520repair%2520workshop&width=800&height=500&seq=2&orientation=landscape" alt="Perawatan Jam" class="w-full h-full object-cover object-top">
+            </div>
+            <div class="p-6">
+                <div class="flex gap-2 mb-3">
+                    <span class="text-xs font-medium px-2 py-1 bg-blue-100 text-blue-700 rounded-full">Perawatan</span>
+                    <span class="text-xs font-medium px-2 py-1 bg-gray-100 text-gray-700 rounded-full">5 Mei 2025</span>
+                </div>
+                <h3 class="article-title text-xl font-semibold mb-3 transition-colors">Panduan Lengkap Perawatan Jam Tangan Mekanik</h3>
+                <p class="text-gray-600 mb-4 line-clamp-3">Pelajari cara merawat jam tangan mekanik Anda agar tetap presisi dan awet. Artikel ini membahas teknik pembersihan, penyimpanan, dan perawatan rutin yang tepat untuk berbagai jenis jam tangan mekanik.</p>
+                <a href="artikel-perawatan.html" class="read-more text-primary font-medium flex items-center gap-2 transition-all">
+                    <span>Baca Selengkapnya</span>
+                    <i class="ri-arrow-right-line"></i>
+                </a>                
+            </div>
+        </article>
+        
+        <article class="article-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all">
+            <div class="h-52 overflow-hidden">
+                <img src="https://readdy.ai/api/search-image?query=vintage%2520pocket%2520watches%2520and%2520antique%2520timepieces%2520arranged%2520chronologically%2520on%2520dark%2520wooden%2520surface%252C%2520showing%2520evolution%2520of%2520watchmaking%252C%2520professional%2520product%2520photography%252C%2520museum%2520quality%2520display&width=800&height=500&seq=3&orientation=landscape" alt="Sejarah Jam" class="w-full h-full object-cover object-top">
+            </div>
+            <div class="p-6">
+                <div class="flex gap-2 mb-3">
+                    <span class="text-xs font-medium px-2 py-1 bg-amber-100 text-amber-700 rounded-full">Sejarah</span>
+                    <span class="text-xs font-medium px-2 py-1 bg-gray-100 text-gray-700 rounded-full">2 Mei 2025</span>
+                </div>
+                <h3 class="article-title text-xl font-semibold mb-3 transition-colors">Evolusi Jam Tangan: Dari Sundial hingga Smartwatch</h3>
+                <p class="text-gray-600 mb-4 line-clamp-3">Telusuri perjalanan panjang evolusi pengukur waktu sepanjang sejarah manusia. Artikel ini mengulas perkembangan teknologi pengukuran waktu dari zaman kuno hingga era digital modern dengan smartwatch.</p>
+                <a href="#" class="read-more text-primary font-medium flex items-center gap-2 transition-all">
+                    <span>Baca Selengkapnya</span>
+                    <i class="ri-arrow-right-line"></i>
+                </a>
+            </div>
+        </article>
+        
+        <article class="article-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all">
+            <div class="h-52 overflow-hidden">
+                <img src="https://readdy.ai/api/search-image?query=luxury%2520watches%2520comparison%2520side%2520by%2520side%2520on%2520black%2520surface%252C%2520showing%2520different%2520high-end%2520watch%2520brands%2520and%2520models%252C%2520detailed%2520close-up%2520of%2520dials%2520and%2520complications%252C%2520professional%2520product%2520photography&width=800&height=500&seq=4&orientation=landscape" alt="Perbandingan Jam" class="w-full h-full object-cover object-top">
+            </div>
+            <div class="p-6">
+                <div class="flex gap-2 mb-3">
+                    <span class="text-xs font-medium px-2 py-1 bg-green-100 text-green-700 rounded-full">Review</span>
+                    <span class="text-xs font-medium px-2 py-1 bg-gray-100 text-gray-700 rounded-full">28 April 2025</span>
+                </div>
+                <h3 class="article-title text-xl font-semibold mb-3 transition-colors">Perbandingan: Rolex Submariner vs Omega Seamaster</h3>
+                <p class="text-gray-600 mb-4 line-clamp-3">Analisis mendalam dua ikon jam tangan diving: Rolex Submariner dan Omega Seamaster. Artikel ini membandingkan desain, performa, nilai, dan sejarah kedua model legendaris ini untuk membantu Anda memilih.</p>
+                <a href="#" class="read-more text-primary font-medium flex items-center gap-2 transition-all">
+                    <span>Baca Selengkapnya</span>
+                    <i class="ri-arrow-right-line"></i>
+                </a>
+            </div>
+        </article>
+    </div>
+</section>
+<section class="max-w-7xl mx-auto px-4 py-12">
+    <h2 class="text-3xl font-bold mb-2">Perawatan Jam Tangan</h2>
+    <p class="text-gray-600 mb-8">Panduan dan tips untuk merawat jam tangan Anda agar tetap berfungsi optimal dan awet</p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <article class="article-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all">
+            <div class="h-48 overflow-hidden">
+                <img src="https://readdy.ai/api/search-image?query=watch%2520cleaning%2520kit%2520with%2520microfiber%2520cloth%252C%2520specialized%2520brushes%2520and%2520cleaning%2520solution%2520arranged%2520neatly%2520on%2520wooden%2520surface%252C%2520professional%2520product%2520photography%252C%2520bright%2520lighting&width=600&height=400&seq=5&orientation=landscape" alt="Pembersihan Jam" class="w-full h-full object-cover object-top">
+            </div>
+            <div class="p-5">
+                <span class="text-xs font-medium px-2 py-1 bg-blue-100 text-blue-700 rounded-full">Pembersihan</span>
+                <h3 class="article-title text-lg font-semibold my-3 transition-colors">Cara Membersihkan Jam Tangan dengan Benar</h3>
+                <p class="text-gray-600 mb-4 text-sm line-clamp-3">Panduan langkah demi langkah untuk membersihkan berbagai jenis jam tangan, dari jam tangan kuarsa sederhana hingga jam tangan mekanik mewah, tanpa merusak komponennya.</p>
+                <a href="#" class="read-more text-primary font-medium flex items-center gap-2 transition-all text-sm">
+                    <span>Baca Selengkapnya</span>
+                    <i class="ri-arrow-right-line"></i>
+                </a>
+            </div>
+        </article>
+        
+        <article class="article-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all">
+            <div class="h-48 overflow-hidden">
+                <img src="https://readdy.ai/api/search-image?query=elegant%2520watch%2520storage%2520box%2520with%2520multiple%2520compartments%2520displaying%2520various%2520luxury%2520watches%252C%2520leather%2520interior%252C%2520professional%2520product%2520photography%252C%2520soft%2520lighting&width=600&height=400&seq=6&orientation=landscape" alt="Penyimpanan Jam" class="w-full h-full object-cover object-top">
+            </div>
+            <div class="p-5">
+                <span class="text-xs font-medium px-2 py-1 bg-blue-100 text-blue-700 rounded-full">Penyimpanan</span>
+                <h3 class="article-title text-lg font-semibold my-3 transition-colors">Tips Menyimpan Koleksi Jam Tangan</h3>
+                <p class="text-gray-600 mb-4 text-sm line-clamp-3">Pelajari cara terbaik untuk menyimpan koleksi jam tangan Anda agar terhindar dari kerusakan, debu, dan kelembaban. Termasuk rekomendasi kotak penyimpanan dan winder.</p>
+                <a href="#" class="read-more text-primary font-medium flex items-center gap-2 transition-all text-sm">
+                    <span>Baca Selengkapnya</span>
+                    <i class="ri-arrow-right-line"></i>
+                </a>
+            </div>
+        </article>
+        
+        <article class="article-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all">
+            <div class="h-48 overflow-hidden">
+                <img src="https://readdy.ai/api/search-image?query=watch%2520movement%2520being%2520serviced%2520by%2520watchmaker%252C%2520close-up%2520of%2520hands%2520working%2520with%2520precision%2520tools%2520on%2520intricate%2520mechanical%2520parts%252C%2520professional%2520photography%252C%2520workshop%2520setting&width=600&height=400&seq=7&orientation=landscape" alt="Service Jam" class="w-full h-full object-cover object-top">
+            </div>
+            <div class="p-5">
+                <span class="text-xs font-medium px-2 py-1 bg-blue-100 text-blue-700 rounded-full">Servis</span>
+                <h3 class="article-title text-lg font-semibold my-3 transition-colors">Kapan Harus Melakukan Service Jam Tangan</h3>
+                <p class="text-gray-600 mb-4 text-sm line-clamp-3">Mengenal tanda-tanda jam tangan yang membutuhkan service, jadwal perawatan rutin yang direkomendasikan, dan apa yang terjadi selama proses service.</p>
+                <a href="#" class="read-more text-primary font-medium flex items-center gap-2 transition-all text-sm">
+                    <span>Baca Selengkapnya</span>
+                    <i class="ri-arrow-right-line"></i>
+                </a>
+            </div>
+        </article>
+    </div>
+    
+    <div class="mt-8 text-center">
+        <a href="#" class="inline-block px-6 py-3 border border-gray-300 rounded-full text-gray-700 font-medium hover:bg-gray-50 transition-all">
+            Lihat Semua Artikel Perawatan
+        </a>
+    </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-4 py-12">
+    <h2 class="text-3xl font-bold mb-2">Sejarah Horology</h2>
+    <p class="text-gray-600 mb-8">Telusuri perjalanan evolusi pengukuran waktu dan jam tangan sepanjang sejarah</p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <article class="article-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all">
+            <div class="h-48 overflow-hidden">
+                <img src="https://readdy.ai/api/search-image?query=ancient%2520sundial%2520in%2520historical%2520setting%252C%2520stone%2520sundial%2520with%2520ornate%2520carvings%252C%2520archaeological%2520site%252C%2520professional%2520photography%252C%2520historical%2520artifact&width=600&height=400&seq=8&orientation=landscape" alt="Sundial Kuno" class="w-full h-full object-cover object-top">
+            </div>
+            <div class="p-5">
+                <span class="text-xs font-medium px-2 py-1 bg-amber-100 text-amber-700 rounded-full">Zaman Kuno</span>
+                <h3 class="article-title text-lg font-semibold my-3 transition-colors">Pengukur Waktu Pertama: Sundial dan Clepsydra</h3>
+                <p class="text-gray-600 mb-4 text-sm line-clamp-3">Mengenal alat pengukur waktu pertama yang diciptakan manusia, dari sundial (jam matahari) hingga clepsydra (jam air) di peradaban Mesir, Yunani, dan Romawi kuno.</p>
+                <a href="#" class="read-more text-primary font-medium flex items-center gap-2 transition-all text-sm">
+                    <span>Baca Selengkapnya</span>
+                    <i class="ri-arrow-right-line"></i>
+                </a>
+            </div>
+        </article>
+        
+        <article class="article-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all">
+            <div class="h-48 overflow-hidden">
+                <img src="https://readdy.ai/api/search-image?query=antique%2520pocket%2520watch%2520with%2520ornate%2520gold%2520case%2520and%2520chain%2520on%2520vintage%2520map%252C%2520historical%2520artifact%252C%2520professional%2520product%2520photography%252C%2520museum%2520quality&width=600&height=400&seq=9&orientation=landscape" alt="Jam Saku" class="w-full h-full object-cover object-top">
+            </div>
+            <div class="p-5">
+                <span class="text-xs font-medium px-2 py-1 bg-amber-100 text-amber-700 rounded-full">Abad ke-16</span>
+                <h3 class="article-title text-lg font-semibold my-3 transition-colors">Sejarah Jam Saku: Awal Mula Portabilitas</h3>
+                <p class="text-gray-600 mb-4 text-sm line-clamp-3">Menelusuri perkembangan jam saku dari abad ke-16 hingga akhir abad ke-19, termasuk inovasi teknis dan pengaruhnya terhadap budaya dan fashion.</p>
+                <a href="#" class="read-more text-primary font-medium flex items-center gap-2 transition-all text-sm">
+                    <span>Baca Selengkapnya</span>
+                    <i class="ri-arrow-right-line"></i>
+                </a>
+            </div>
+        </article>
+        
+        <article class="article-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all">
+            <div class="h-48 overflow-hidden">
+                <img src="https://readdy.ai/api/search-image?query=vintage%2520wristwatches%2520from%2520World%2520War%2520I%2520era%2520displayed%2520on%2520military%2520map%2520and%2520uniform%2520fabric%252C%2520historical%2520timepieces%252C%2520professional%2520product%2520photography%252C%2520museum%2520quality&width=600&height=400&seq=10&orientation=landscape" alt="Jam Tangan Perang" class="w-full h-full object-cover object-top">
+            </div>
+            <div class="p-5">
+                <span class="text-xs font-medium px-2 py-1 bg-amber-100 text-amber-700 rounded-full">Abad ke-20</span>
+                <h3 class="article-title text-lg font-semibold my-3 transition-colors">Jam Tangan dan Perang Dunia: Revolusi Wearable</h3>
+                <p class="text-gray-600 mb-4 text-sm line-clamp-3">Bagaimana Perang Dunia I mengubah jam tangan dari aksesori wanita menjadi alat praktis untuk pria, dan perkembangan desain jam tangan militer yang memengaruhi industri.</p>
+                <a href="#" class="read-more text-primary font-medium flex items-center gap-2 transition-all text-sm">
+                    <span>Baca Selengkapnya</span>
+                    <i class="ri-arrow-right-line"></i>
+                </a>
+            </div>
+        </article>
+    </div>
+    
+    <div class="mt-8 text-center">
+        <a href="#" class="inline-block px-6 py-3 border border-gray-300 rounded-full text-gray-700 font-medium hover:bg-gray-50 transition-all">
+            Lihat Semua Artikel Sejarah
+        </a>
+    </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-4 py-12">
+    <h2 class="text-3xl font-bold mb-2">Perbandingan & Review</h2>
+    <p class="text-gray-600 mb-8">Analisis mendalam dan perbandingan berbagai merek dan model jam tangan</p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <article class="article-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all">
+            <div class="h-48 overflow-hidden">
+                <img src="https://readdy.ai/api/search-image?query=luxury%2520dive%2520watches%2520comparison%252C%2520multiple%2520high-end%2520diving%2520watches%2520on%2520dark%2520blue%2520background%252C%2520close-up%2520of%2520watch%2520faces%2520and%2520bezels%252C%2520professional%2520product%2520photography&width=600&height=400&seq=11&orientation=landscape" alt="Jam Diving" class="w-full h-full object-cover object-top">
+            </div>
+            <div class="p-5">
+                <span class="text-xs font-medium px-2 py-1 bg-green-100 text-green-700 rounded-full">Diving</span>
+                <h3 class="article-title text-lg font-semibold my-3 transition-colors">5 Jam Tangan Diving Terbaik Tahun 2025</h3>
+                <p class="text-gray-600 mb-4 text-sm line-clamp-3">Review dan perbandingan lima jam tangan diving terbaik tahun ini, dengan analisis ketahanan air, keterbacaan, dan fitur khusus untuk penyelam.</p>
+                <a href="#" class="read-more text-primary font-medium flex items-center gap-2 transition-all text-sm">
+                    <span>Baca Selengkapnya</span>
+                    <i class="ri-arrow-right-line"></i>
+                </a>
+            </div>
+        </article>
+        
+        <article class="article-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all">
+            <div class="h-48 overflow-hidden">
+                <img src="https://readdy.ai/api/search-image?query=luxury%2520dress%2520watches%2520comparison%252C%2520elegant%2520thin%2520watches%2520on%2520black%2520velvet%252C%2520close-up%2520of%2520minimalist%2520watch%2520faces%252C%2520professional%2520product%2520photography%252C%2520studio%2520lighting&width=600&height=400&seq=12&orientation=landscape" alt="Jam Dress" class="w-full h-full object-cover object-top">
+            </div>
+            <div class="p-5">
+                <span class="text-xs font-medium px-2 py-1 bg-green-100 text-green-700 rounded-full">Dress Watch</span>
+                <h3 class="article-title text-lg font-semibold my-3 transition-colors">Jam Tangan Formal: Elegance vs Simplicity</h3>
+                <p class="text-gray-600 mb-4 text-sm line-clamp-3">Membandingkan filosofi desain jam tangan formal dari berbagai merek terkemuka, dengan fokus pada keseimbangan antara elegansi dan kesederhanaan.</p>
+                <a href="#" class="read-more text-primary font-medium flex items-center gap-2 transition-all text-sm">
+                    <span>Baca Selengkapnya</span>
+                    <i class="ri-arrow-right-line"></i>
+                </a>
+            </div>
+        </article>
+        
+        <article class="article-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all">
+            <div class="h-48 overflow-hidden">
+                <img src="https://readdy.ai/api/search-image?query=smartwatches%2520comparison%252C%2520multiple%2520modern%2520smartwatches%2520displaying%2520different%2520features%2520on%2520minimalist%2520background%252C%2520close-up%2520of%2520screens%2520and%2520interfaces%252C%2520professional%2520product%2520photography&width=600&height=400&seq=13&orientation=landscape" alt="Smartwatch" class="w-full h-full object-cover object-top">
+            </div>
+            <div class="p-5">
+                <span class="text-xs font-medium px-2 py-1 bg-green-100 text-green-700 rounded-full">Smartwatch</span>
+                <h3 class="article-title text-lg font-semibold my-3 transition-colors">Smartwatch vs Jam Tradisional: Pilih Mana?</h3>
+                <p class="text-gray-600 mb-4 text-sm line-clamp-3">Analisis komprehensif tentang kelebihan dan kekurangan smartwatch dibandingkan jam tangan tradisional, membantu Anda memilih berdasarkan kebutuhan dan gaya hidup.</p>
+                <a href="#" class="read-more text-primary font-medium flex items-center gap-2 transition-all text-sm">
+                    <span>Baca Selengkapnya</span>
+                    <i class="ri-arrow-right-line"></i>
+                </a>
+            </div>
+        </article>
+    </div>
+    
+    <div class="mt-8 text-center">
+        <a href="#" class="inline-block px-6 py-3 border border-gray-300 rounded-full text-gray-700 font-medium hover:bg-gray-50 transition-all">
+            Lihat Semua Review & Perbandingan
+        </a>
+    </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-4 py-12">
+    <h2 class="text-3xl font-bold mb-2">Tips & Tutorial</h2>
+    <p class="text-gray-600 mb-8">Panduan praktis untuk membantu Anda memaksimalkan pengalaman dengan jam tangan</p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <article class="article-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all">
+            <div class="h-48 overflow-hidden">
+                <img src="https://readdy.ai/api/search-image?query=person%2520adjusting%2520watch%2520strap%2520with%2520tools%252C%2520close-up%2520of%2520hands%2520working%2520on%2520leather%2520watch%2520band%252C%2520professional%2520photography%252C%2520bright%2520lighting%252C%2520tutorial%2520setting&width=600&height=400&seq=14&orientation=landscape" alt="Mengganti Strap" class="w-full h-full object-cover object-top">
+            </div>
+            <div class="p-5">
+                <span class="text-xs font-medium px-2 py-1 bg-purple-100 text-purple-700 rounded-full">Tutorial</span>
+                <h3 class="article-title text-lg font-semibold my-3 transition-colors">Cara Mengganti Strap Jam Tangan Sendiri</h3>
+                <p class="text-gray-600 mb-4 text-sm line-clamp-3">Panduan langkah demi langkah untuk mengganti strap jam tangan dengan berbagai jenis tali, termasuk tips untuk berbagai mekanisme penguncian.</p>
+                <a href="#" class="read-more text-primary font-medium flex items-center gap-2 transition-all text-sm">
+                    <span>Baca Selengkapnya</span>
+                    <i class="ri-arrow-right-line"></i>
+                </a>
+            </div>
+        </article>
+        
+        <article class="article-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all">
+            <div class="h-48 overflow-hidden">
+                <img src="https://readdy.ai/api/search-image?query=person%2520setting%2520time%2520on%2520mechanical%2520watch%252C%2520close-up%2520of%2520hands%2520adjusting%2520crown%252C%2520professional%2520photography%252C%2520bright%2520lighting%252C%2520tutorial%2520setting&width=600&height=400&seq=15&orientation=landscape" alt="Setting Jam" class="w-full h-full object-cover object-top">
+            </div>
+            <div class="p-5">
+                <span class="text-xs font-medium px-2 py-1 bg-purple-100 text-purple-700 rounded-full">Tutorial</span>
+                <h3 class="article-title text-lg font-semibold my-3 transition-colors">Mengatur Waktu dan Tanggal pada Jam Mekanik</h3>
+                <p class="text-gray-600 mb-4 text-sm line-clamp-3">Panduan komprehensif untuk mengatur waktu, tanggal, dan fitur tambahan pada berbagai jenis jam tangan mekanik, termasuk kronograf dan kalender.</p>
+                <a href="#" class="read-more text-primary font-medium flex items-center gap-2 transition-all text-sm">
+                    <span>Baca Selengkapnya</span>
+                    <i class="ri-arrow-right-line"></i>
+                </a>
+            </div>
+        </article>
+        
+        <article class="article-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all">
+            <div class="h-48 overflow-hidden">
+                <img src="https://readdy.ai/api/search-image?query=person%2520choosing%2520watch%2520from%2520collection%252C%2520multiple%2520watches%2520displayed%2520on%2520table%252C%2520hands%2520comparing%2520different%2520styles%252C%2520professional%2520photography%252C%2520bright%2520lighting&width=600&height=400&seq=16&orientation=landscape" alt="Memilih Jam" class="w-full h-full object-cover object-top">
+            </div>
+            <div class="p-5">
+                <span class="text-xs font-medium px-2 py-1 bg-purple-100 text-purple-700 rounded-full">Tips</span>
+                <h3 class="article-title text-lg font-semibold my-3 transition-colors">Panduan Memilih Jam Tangan Pertama</h3>
+                <p class="text-gray-600 mb-4 text-sm line-clamp-3">Tips praktis untuk memilih jam tangan pertama yang sesuai dengan gaya, kebutuhan, dan anggaran Anda, termasuk pertimbangan ukuran, material, dan mekanisme.</p>
+                <a href="#" class="read-more text-primary font-medium flex items-center gap-2 transition-all text-sm">
+                    <span>Baca Selengkapnya</span>
+                    <i class="ri-arrow-right-line"></i>
+                </a>
+            </div>
+        </article>
+    </div>
+    
+    <div class="mt-8 text-center">
+        <a href="#" class="inline-block px-6 py-3 border border-gray-300 rounded-full text-gray-700 font-medium hover:bg-gray-50 transition-all">
+            Lihat Semua Tips & Tutorial
+        </a>
+    </div>
+</section>
+
+
+<section class="max-w-7xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold mb-8 text-center">Statistik Pembaca</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-lg h-80">
+            <h3 class="text-xl font-semibold mb-4">Kategori Artikel Paling Populer</h3>
+            <div id="categoryChart" class="w-full h-64"></div>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-lg h-80">
+            <h3 class="text-xl font-semibold mb-4">Tren Pembaca Bulanan</h3>
+            <div id="trendsChart" class="w-full h-64"></div>
+        </div>
+    </div>
+</section>
+
+ <!-- FOOTER -->
+ <footer class="bg-black text-gray-300 py-10">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-3 gap-8">
+      <div>
+        <h3 class="font-semibold mb-3 text-white">Tentang Kami</h3>
+        <p class="text-xs sm:text-sm leading-relaxed">
+          WatchLuxe adalah pusat servis jam tangan terpercaya dengan pengalaman lebih dari 15 tahun. Kami menyediakan layanan perbaikan dan perawatan untuk berbagai merk jam tangan mewah dengan garansi.
+        </p>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-3 text-white">Layanan Kami</h3>
+        <ul class="text-xs sm:text-sm space-y-2">
+          <li><i class="fas fa-wrench mr-2"></i> Perbaikan Masalah</li>
+          <li><i class="fas fa-sync-alt mr-2"></i> Penggantian Baterai</li>
+          <li><i class="fas fa-tools mr-2"></i> Penggantian Casing</li>
+          <li><i class="fas fa-cogs mr-2"></i> Perawatan Jam</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-3 text-white">Hubungi Kami</h3>
+        <ul class="text-xs sm:text-sm space-y-2">
+          <li><i class="fab fa-whatsapp mr-2"></i> +62 857-3742-3328</li>
+          <li><i class="fab fa-instagram mr-2"></i> @WatcLuxe</li>
+          <li><i class="fab fa-facebook-f mr-2"></i> WatchLuxe</li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-center text-xs text-gray-500 mt-8">
+      © 2025 WatchLuxe. Hak Cipta Dilindungi.
+    </div>
+  </footer>
+
+</body>
+</html>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Category Chart
+    const categoryChart = echarts.init(document.getElementById('categoryChart'));
+    const categoryOption = {
+        animation: false,
+        tooltip: {
+            trigger: 'item',
+            backgroundColor: 'rgba(255, 255, 255, 0.8)',
+            borderColor: '#f0f0f0',
+            textStyle: {
+                color: '#1f2937'
+            }
+        },
+        legend: {
+            orient: 'vertical',
+            right: 10,
+            top: 'center',
+            textStyle: {
+                color: '#1f2937'
+            }
+        },
+        series: [
+            {
+                name: 'Pembaca',
+                type: 'pie',
+                radius: ['40%', '70%'],
+                avoidLabelOverlap: false,
+                itemStyle: {
+                    borderRadius: 8,
+                    borderColor: '#fff',
+                    borderWidth: 2
+                },
+                label: {
+                    show: false
+                },
+                emphasis: {
+                    label: {
+                        show: false
+                    }
+                },
+                labelLine: {
+                    show: false
+                },
+                data: [
+                    { value: 35, name: 'Perawatan', itemStyle: { color: 'rgba(87, 181, 231, 1)' } },
+                    { value: 28, name: 'Review', itemStyle: { color: 'rgba(141, 211, 199, 1)' } },
+                    { value: 22, name: 'Sejarah', itemStyle: { color: 'rgba(251, 191, 114, 1)' } },
+                    { value: 15, name: 'Tutorial', itemStyle: { color: 'rgba(252, 141, 98, 1)' } }
+                ]
+            }
+        ]
+    };
+    categoryChart.setOption(categoryOption);
+    
+    // Trends Chart
+    const trendsChart = echarts.init(document.getElementById('trendsChart'));
+    const trendsOption = {
+        animation: false,
+        tooltip: {
+            trigger: 'axis',
+            backgroundColor: 'rgba(255, 255, 255, 0.8)',
+            borderColor: '#f0f0f0',
+            textStyle: {
+                color: '#1f2937'
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            top: '3%',
+            containLabel: true
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            data: ['Jan', 'Feb', 'Mar', 'Apr', 'Mei'],
+            axisLabel: {
+                color: '#1f2937'
+            },
+            axisLine: {
+                lineStyle: {
+                    color: '#e5e7eb'
+                }
+            }
+        },
+        yAxis: {
+            type: 'value',
+            axisLabel: {
+                color: '#1f2937'
+            },
+            axisLine: {
+                lineStyle: {
+                    color: '#e5e7eb'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: '#f3f4f6'
+                }
+            }
+        },
+        series: [
+            {
+                name: 'Pembaca',
+                type: 'line',
+                smooth: true,
+                lineStyle: {
+                    width: 3,
+                    color: 'rgba(87, 181, 231, 1)'
+                },
+                areaStyle: {
+                    color: {
+                        type: 'linear',
+                        x: 0,
+                        y: 0,
+                        x2: 0,
+                        y2: 1,
+                        colorStops: [{
+                            offset: 0, color: 'rgba(87, 181, 231, 0.2)'
+                        }, {
+                            offset: 1, color: 'rgba(87, 181, 231, 0.01)'
+                        }]
+                    }
+                },
+                emphasis: {
+                    focus: 'series'
+                },
+                data: [12000, 15000, 18000, 22000, 25000]
+            }
+        ]
+    };
+    trendsChart.setOption(trendsOption);
+    
+    // Resize charts when window size changes
+    window.addEventListener('resize', function() {
+        categoryChart.resize();
+        trendsChart.resize();
+    });
+});
+</script>
+</body>
+</html>
