@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TimeLuxe - Pendaftaran Acara</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#000000',secondary:'#333333'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+    .font-pacifico {
+       font-family: "Pacifico", cursive;
+     }
+.custom-radio input[type="radio"] {
+display: none;
+}
+.custom-radio input[type="radio"] + label {
+position: relative;
+padding-left: 30px;
+cursor: pointer;
+display: inline-block;
+line-height: 20px;
+}
+.custom-radio input[type="radio"] + label:before {
+content: '';
+position: absolute;
+left: 0;
+top: 0;
+width: 20px;
+height: 20px;
+border: 2px solid #ccc;
+border-radius: 50%;
+background: #fff;
+}
+.custom-radio input[type="radio"]:checked + label:after {
+content: '';
+position: absolute;
+left: 5px;
+top: 5px;
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background: #000;
+}
+.custom-checkbox input[type="checkbox"] {
+display: none;
+}
+.custom-checkbox input[type="checkbox"] + label {
+position: relative;
+padding-left: 30px;
+cursor: pointer;
+display: inline-block;
+line-height: 20px;
+}
+.custom-checkbox input[type="checkbox"] + label:before {
+content: '';
+position: absolute;
+left: 0;
+top: 0;
+width: 20px;
+height: 20px;
+border: 2px solid #ccc;
+border-radius: 4px;
+background: #fff;
+}
+.custom-checkbox input[type="checkbox"]:checked + label:after {
+content: '';
+position: absolute;
+left: 7px;
+top: 3px;
+width: 6px;
+height: 12px;
+border: solid #000;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+<style>
+    .font-pacifico {
+       font-family: "Pacifico", cursive;
+     }
+   </style>
+ </head>
+ <body class="bg-gray-50 flex flex-col min-h-screen">
+   <header class="bg-black text-white">
+     <nav class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex items-center h-16">
+       <a href="index.html" class="font-pacifico text-xl select-none">TimeLuxe</a>
+       <ul class="ml-auto flex space-x-6 text-sm font-normal">
+        <li><a class="text-white font-semibold" href="index.html">Home</a></li>
+        <li><a href="service.html" class="font-semibold hover:underline">Service</a></li>
+        <li><a href="perpustakaan.html" class="font-semibold hover:underline">Perpustakaan</a></li>
+        <li><a href="komunitas.html" class="font-semibold hover:underline">Komunitas</a></li>
+        <li><a href="layanan.html" class="font-semibold hover:underline">Layanan</a></li>
+       </ul>
+     </nav>
+   </header>
+<!-- Main Content -->
+<main class="container mx-auto px-6 py-8 max-w-4xl">
+<!-- Banner Image -->
+<div class="rounded-lg overflow-hidden shadow-md mb-8">
+<img src="https://readdy.ai/api/search-image?query=luxury%2520watch%2520exhibition%2520with%2520people%2520in%2520business%2520attire%2520looking%2520at%2520watches%2520in%2520glass%2520displays%252C%2520professional%2520setting%252C%2520high-end%2520watches%252C%2520networking%2520event%252C%2520business%2520meeting%252C%2520corporate%2520gathering&width=1200&height=400&seq=5&orientation=landscape" alt="Gathering Komunitas Jam Tangan" class="w-full h-64 object-cover object-top">
+</div>
+<!-- Event Details -->
+<div class="bg-white rounded-lg shadow-md p-8 mb-8">
+<h1 class="text-3xl font-bold mb-6">Gathering Komunitas Jam Tangan</h1>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+<div class="bg-gray-50 p-4 rounded-lg">
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center mr-2 text-black">
+<i class="ri-calendar-line ri-lg"></i>
+</div>
+<h3 class="font-semibold">Tanggal & Waktu</h3>
+</div>
+<p class="text-gray-700 ml-8">29 April 2024</p>
+<p class="text-gray-700 ml-8">13:00 - 17:00 WIB</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center mr-2 text-black">
+<i class="ri-map-pin-line ri-lg"></i>
+</div>
+<h3 class="font-semibold">Lokasi</h3>
+</div>
+<p class="text-gray-700 ml-8">Hotel Aryaduta Makassar</p>
+<p class="text-gray-700 ml-8">Jl. Somba Opu No. 297, Makassar</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center mr-2 text-black">
+<i class="ri-ticket-line ri-lg"></i>
+</div>
+<h3 class="font-semibold">Harga Tiket</h3>
+</div>
+<p class="text-gray-700 ml-8">Rp 250.000 / orang</p>
+<p class="text-gray-700 ml-8">Tersisa 45 dari 100 tiket</p>
+</div>
+</div>
+<div class="border-t border-gray-200 pt-6">
+<h3 class="font-semibold text-lg mb-3">Tentang Acara</h3>
+<p class="text-gray-700 mb-4">Bergabunglah dalam pertemuan komunitas jam tangan terbesar di Makassar. Acara ini akan menghadirkan para kolektor dan penggemar jam tangan dari seluruh Indonesia untuk berbagi pengalaman, pengetahuan, dan networking.</p>
+<h4 class="font-medium mb-2">Kegiatan:</h4>
+<ul class="list-disc list-inside text-gray-700 mb-4 ml-4">
+<li>Diskusi panel dengan kolektor jam tangan ternama</li>
+<li>Showcase jam tangan langka dan limited edition</li>
+<li>Networking session dengan sesama penggemar</li>
+<li>Workshop singkat tentang perawatan jam tangan</li>
+</ul>
+<h4 class="font-medium mb-2">Fasilitas:</h4>
+<ul class="list-disc list-inside text-gray-700 ml-4">
+<li>Sertifikat kehadiran</li>
+<li>Goodie bag eksklusif</li>
+<li>Coffee break dan makan siang</li>
+<li>Voucher diskon dari sponsor</li>
+</ul>
+</div>
+</div>
+<!-- Registration Form -->
+<div class="bg-white rounded-lg shadow-md p-8 mb-8">
+<h2 class="text-2xl font-bold mb-6">Formulir Pendaftaran</h2>
+<form id="registrationForm">
+<!-- Personal Information -->
+<div class="mb-6">
+<h3 class="font-semibold text-lg mb-4">Data Peserta</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label for="fullName" class="block text-gray-700 mb-2">Nama Lengkap</label>
+<input type="text" id="fullName" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-black" required>
+</div>
+<div>
+<label for="email" class="block text-gray-700 mb-2">Email</label>
+<input type="email" id="email" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-black" required>
+</div>
+<div>
+<label for="phone" class="block text-gray-700 mb-2">Nomor Telepon</label>
+<input type="tel" id="phone" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-black" required>
+</div>
+</div>
+</div>
+<!-- Ticket Information -->
+<div class="mb-6">
+<h3 class="font-semibold text-lg mb-4">Informasi Tiket</h3>
+<div class="flex items-center mb-4">
+<label for="ticketCount" class="block text-gray-700 mr-4">Jumlah Tiket</label>
+<div class="flex items-center border border-gray-300 rounded">
+<button type="button" id="decreaseTicket" class="px-3 py-2 bg-gray-100 border-r border-gray-300 !rounded-button whitespace-nowrap">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-subtract-line"></i>
+</div>
+</button>
+<input type="number" id="ticketCount" min="1" max="10" value="1" class="w-16 p-2 text-center border-none focus:outline-none">
+<button type="button" id="increaseTicket" class="px-3 py-2 bg-gray-100 border-l border-gray-300 !rounded-button whitespace-nowrap">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-add-line"></i>
+</div>
+</button>
+</div>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<div class="flex justify-between mb-2">
+<span>Harga per tiket:</span>
+<span>Rp 250.000</span>
+</div>
+<div class="flex justify-between font-semibold text-lg">
+<span>Total:</span>
+<span id="totalPrice">Rp 250.000</span>
+</div>
+</div>
+</div>
+<!-- Payment Method -->
+<div class="mb-6">
+<h3 class="font-semibold text-lg mb-4">Metode Pembayaran</h3>
+<div class="space-y-3">
+<div class="custom-radio">
+<input type="radio" id="bankTransfer" name="paymentMethod" value="bankTransfer" checked>
+<label for="bankTransfer" class="block p-3 border border-gray-300 rounded hover:border-gray-400">Transfer Bank</label>
+</div>
+<div class="custom-radio">
+<input type="radio" id="eWallet" name="paymentMethod" value="eWallet">
+<label for="eWallet" class="block p-3 border border-gray-300 rounded hover:border-gray-400">E-Wallet</label>
+</div>
+<div class="custom-radio">
+<input type="radio" id="creditCard" name="paymentMethod" value="creditCard">
+<label for="creditCard" class="block p-3 border border-gray-300 rounded hover:border-gray-400">Kartu Kredit</label>
+</div>
+</div>
+<!-- Payment Details (Bank Transfer) -->
+<div id="bankTransferDetails" class="mt-4 p-4 bg-gray-50 rounded-lg">
+<h4 class="font-medium mb-3">Informasi Rekening</h4>
+<p class="mb-2">Bank BCA</p>
+<p class="mb-2">No. Rekening: 8730456210</p>
+<p class="mb-2">Atas Nama: PT TimeLuxe Indonesia</p>
+<p class="text-sm text-gray-600 mt-3">Harap melakukan pembayaran dalam 24 jam setelah pendaftaran. Kirim bukti transfer ke email: konfirmasi@timeluxe.id</p>
+</div>
+<!-- Payment Details (E-Wallet) -->
+<div id="eWalletDetails" class="mt-4 p-4 bg-gray-50 rounded-lg hidden">
+<h4 class="font-medium mb-3">Pilih E-Wallet</h4>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+<button type="button" class="p-3 border border-gray-300 rounded text-center hover:border-black !rounded-button whitespace-nowrap">
+<div class="w-6 h-6 mx-auto flex items-center justify-center mb-1">
+<i class="ri-wallet-3-fill"></i>
+</div>
+<span>GoPay</span>
+</button>
+<button type="button" class="p-3 border border-gray-300 rounded text-center hover:border-black !rounded-button whitespace-nowrap">
+<div class="w-6 h-6 mx-auto flex items-center justify-center mb-1">
+<i class="ri-wallet-3-fill"></i>
+</div>
+<span>OVO</span>
+</button>
+<button type="button" class="p-3 border border-gray-300 rounded text-center hover:border-black !rounded-button whitespace-nowrap">
+<div class="w-6 h-6 mx-auto flex items-center justify-center mb-1">
+<i class="ri-wallet-3-fill"></i>
+</div>
+<span>DANA</span>
+</button>
+<button type="button" class="p-3 border border-gray-300 rounded text-center hover:border-black !rounded-button whitespace-nowrap">
+<div class="w-6 h-6 mx-auto flex items-center justify-center mb-1">
+<i class="ri-wallet-3-fill"></i>
+</div>
+<span>LinkAja</span>
+</button>
+</div>
+</div>
+<!-- Payment Details (Credit Card) -->
+<div id="creditCardDetails" class="mt-4 p-4 bg-gray-50 rounded-lg hidden">
+<div class="grid grid-cols-1 gap-4">
+<div>
+<label for="cardNumber" class="block text-gray-700 mb-2">Nomor Kartu</label>
+<input type="text" id="cardNumber" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-black" placeholder="1234 5678 9012 3456">
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label for="expiryDate" class="block text-gray-700 mb-2">Tanggal Kadaluarsa</label>
+<input type="text" id="expiryDate" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-black" placeholder="MM/YY">
+</div>
+<div>
+<label for="cvv" class="block text-gray-700 mb-2">CVV</label>
+<input type="text" id="cvv" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-black" placeholder="123">
+</div>
+</div>
+<div>
+<label for="cardName" class="block text-gray-700 mb-2">Nama pada Kartu</label>
+<input type="text" id="cardName" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-black">
+</div>
+</div>
+</div>
+</div>
+<!-- Terms and Conditions -->
+<div class="mb-6">
+<h3 class="font-semibold text-lg mb-4">Ketentuan Acara</h3>
+<div class="bg-gray-50 p-4 rounded-lg mb-4">
+<div class="mb-3 cursor-pointer" id="termsToggle">
+<div class="flex items-center justify-between">
+<h4 class="font-medium">Syarat dan Ketentuan</h4>
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-arrow-down-s-line" id="termsArrow"></i>
+</div>
+</div>
+</div>
+<div id="termsContent" class="hidden">
+<p class="text-sm text-gray-700 mb-2">1. Pendaftaran acara tidak dapat dibatalkan dan tiket tidak dapat dikembalikan.</p>
+<p class="text-sm text-gray-700 mb-2">2. Peserta wajib hadir tepat waktu. Keterlambatan lebih dari 30 menit tidak diperkenankan masuk.</p>
+<p class="text-sm text-gray-700 mb-2">3. Peserta wajib menunjukkan bukti pendaftaran dan identitas diri saat registrasi di lokasi acara.</p>
+<p class="text-sm text-gray-700 mb-2">4. Panitia berhak menolak peserta yang tidak memenuhi ketentuan acara.</p>
+<p class="text-sm text-gray-700 mb-2">5. Peserta dilarang membawa makanan dan minuman dari luar venue acara.</p>
+<p class="text-sm text-gray-700">6. Panitia berhak mengubah jadwal atau pembicara acara jika terjadi kondisi yang tidak terduga.</p>
+</div>
+</div>
+<div class="custom-checkbox">
+<input type="checkbox" id="agreeTerms" required>
+<label for="agreeTerms" class="text-gray-700">Saya menyetujui syarat dan ketentuan acara</label>
+</div>
+</div>
+<!-- Submit Button -->
+<button type="submit" class="w-full bg-black text-white py-4 font-medium text-lg !rounded-button whitespace-nowrap hover:bg-gray-900 transition-colors">Konfirmasi Pendaftaran</button>
+</form>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-black text-white py-12">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- About Us Column -->
+<div>
+<h3 class="text-xl font-bold mb-4">Tentang Kami</h3>
+<p class="text-gray-400">WatchLuxe adalah pusat servis jam tangan terpercaya dengan pengalaman lebih dari 15 tahun. Kami menyediakan layanan perbaikan dan perawatan untuk berbagai merk jam tangan mewah dengan garansi.</p>
+</div>
+<!-- Services Column -->
+<div>
+<h3 class="text-xl font-bold mb-4">Layanan Kami</h3>
+<ul class="space-y-2 text-gray-400">
+<li class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-tools-line"></i>
+</div>
+<span>Perbaikan Masalah</span>
+</li>
+<li class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-refresh-line"></i>
+</div>
+<span>Penggantian Budaya</span>
+</li>
+<li class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-box-3-line"></i>
+</div>
+<span>Penggantian Casing</span>
+</li>
+<li class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-service-line"></i>
+</div>
+<span>Perawatan Jam</span>
+</li>
+</ul>
+</div>
+<!-- Contact Column -->
+<div>
+<h3 class="text-xl font-bold mb-4">Hubungi Kami</h3>
+<ul class="space-y-2 text-gray-400">
+<li class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-phone-line"></i>
+</div>
+<span>+62 857-3742-3328</span>
+</li>
+<li class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-instagram-line"></i>
+</div>
+<span>@WatchLuxe</span>
+</li>
+<li class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-facebook-circle-line"></i>
+</div>
+<span>WatchLuxe</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Copyright -->
+<div class="border-t border-gray-800 mt-10 pt-6 text-center text-gray-500">
+<p>© 2025 WatchLuxe. Hak Cipta Dilindungi.</p>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const ticketCountInput = document.getElementById('ticketCount');
+const decreaseBtn = document.getElementById('decreaseTicket');
+const increaseBtn = document.getElementById('increaseTicket');
+const totalPriceElement = document.getElementById('totalPrice');
+const pricePerTicket = 250000;
+function updateTotalPrice() {
+const ticketCount = parseInt(ticketCountInput.value);
+const totalPrice = ticketCount * pricePerTicket;
+totalPriceElement.textContent = `Rp ${totalPrice.toLocaleString('id-ID')}`;
+}
+decreaseBtn.addEventListener('click', function() {
+if (parseInt(ticketCountInput.value) > 1) {
+ticketCountInput.value = parseInt(ticketCountInput.value) - 1;
+updateTotalPrice();
+}
+});
+increaseBtn.addEventListener('click', function() {
+if (parseInt(ticketCountInput.value) < 10) {
+ticketCountInput.value = parseInt(ticketCountInput.value) + 1;
+updateTotalPrice();
+}
+});
+ticketCountInput.addEventListener('change', function() {
+let value = parseInt(this.value);
+if (isNaN(value) || value < 1) {
+value = 1;
+} else if (value > 10) {
+value = 10;
+}
+this.value = value;
+updateTotalPrice();
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+const bankTransferRadio = document.getElementById('bankTransfer');
+const eWalletRadio = document.getElementById('eWallet');
+const creditCardRadio = document.getElementById('creditCard');
+const bankTransferDetails = document.getElementById('bankTransferDetails');
+const eWalletDetails = document.getElementById('eWalletDetails');
+const creditCardDetails = document.getElementById('creditCardDetails');
+function updatePaymentDetails() {
+bankTransferDetails.classList.add('hidden');
+eWalletDetails.classList.add('hidden');
+creditCardDetails.classList.add('hidden');
+if (bankTransferRadio.checked) {
+bankTransferDetails.classList.remove('hidden');
+} else if (eWalletRadio.checked) {
+eWalletDetails.classList.remove('hidden');
+} else if (creditCardRadio.checked) {
+creditCardDetails.classList.remove('hidden');
+}
+}
+bankTransferRadio.addEventListener('change', updatePaymentDetails);
+eWalletRadio.addEventListener('change', updatePaymentDetails);
+creditCardRadio.addEventListener('change', updatePaymentDetails);
+});
+document.addEventListener('DOMContentLoaded', function() {
+const termsToggle = document.getElementById('termsToggle');
+const termsContent = document.getElementById('termsContent');
+const termsArrow = document.getElementById('termsArrow');
+termsToggle.addEventListener('click', function() {
+termsContent.classList.toggle('hidden');
+if (termsContent.classList.contains('hidden')) {
+termsArrow.classList.remove('ri-arrow-up-s-line');
+termsArrow.classList.add('ri-arrow-down-s-line');
+} else {
+termsArrow.classList.remove('ri-arrow-down-s-line');
+termsArrow.classList.add('ri-arrow-up-s-line');
+}
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+const form = document.getElementById('registrationForm');
+
+function generateTicketId() {
+    const timestamp = Date.now().toString().slice(-6);
+    const random = Math.floor(Math.random() * 1000).toString().padStart(3, '0');
+    return `TL${timestamp}${random}`;
+}
+
+function showTicket(formData) {
+    const ticketId = generateTicketId();
+    const ticketModal = document.createElement('div');
+    ticketModal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+    ticketModal.innerHTML = `
+        <div class="bg-white rounded-lg w-full max-w-2xl mx-4 overflow-hidden">
+            <div class="p-6 bg-black text-white flex justify-between items-center">
+                <h3 class="text-xl font-bold">E-Ticket Gathering Komunitas Jam Tangan</h3>
+                <button class="text-white hover:text-gray-300" onclick="this.closest('.fixed').remove()">
+                    <div class="w-6 h-6 flex items-center justify-center">
+                        <i class="ri-close-line ri-lg"></i>
+                    </div>
+                </button>
+            </div>
+            <div class="p-6">
+                <div class="border-2 border-dashed border-gray-200 rounded-lg p-6 mb-6">
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <h4 class="text-2xl font-bold mb-2">Gathering Komunitas Jam Tangan</h4>
+                            <p class="text-gray-600">29 April 2024 • 13:00 - 17:00 WIB</p>
+                            <p class="text-gray-600">Hotel Aryaduta Makassar</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-sm text-gray-500">Ticket ID</p>
+                            <p class="font-mono font-bold">${ticketId}</p>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-200 pt-6 mb-6">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-sm text-gray-500 mb-1">Nama</p>
+                                <p class="font-medium">${formData.get('fullName')}</p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 mb-1">Email</p>
+                                <p class="font-medium">${formData.get('email')}</p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 mb-1">Nomor Telepon</p>
+                                <p class="font-medium">${formData.get('phone')}</p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 mb-1">Jumlah Tiket</p>
+                                <p class="font-medium">${formData.get('ticketCount')} tiket</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="w-32 h-32 bg-gray-100 rounded-lg flex items-center justify-center">
+                            <div class="w-8 h-8 flex items-center justify-center">
+                                <i class="ri-qr-code-line ri-2x"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <p class="text-sm text-gray-500 mb-4">Tunjukkan e-ticket ini saat registrasi di lokasi acara</p>
+                    <button class="bg-black text-white px-6 py-2 rounded !rounded-button whitespace-nowrap hover:bg-gray-900" onclick="window.print()">
+                        <div class="flex items-center justify-center">
+                            <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                <i class="ri-printer-line"></i>
+                            </div>
+                            <span>Cetak Tiket</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(ticketModal);
+}
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+    formData.set('fullName', document.getElementById('fullName').value);
+    formData.set('email', document.getElementById('email').value);
+    formData.set('phone', document.getElementById('phone').value);
+    formData.set('ticketCount', document.getElementById('ticketCount').value);
+    
+    showTicket(formData);
+});
+});
+</script>
+</body>
+</html>
